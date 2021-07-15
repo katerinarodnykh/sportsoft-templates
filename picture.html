@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Шаблоны SportSoft</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/normalize.css" rel="stylesheet">
+</head>
+<body>
+<header class="header"></header>
+<style>
+    .title {
+        text-align: center;
+        margin: 0 0 40px 0;
+    }
+
+    .main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px;
+        background-color: paleturquoise;
+        color: black;
+        font-family: "Arial", sans-serif;
+    }
+
+    pre {
+        background-color: aliceblue;
+    }
+</style>
+<main class="main">
+    <h2 class="title">Оформление картинок</h2>
+    <p>На этапе вёрстки продумываем все размеры картинок и для декстопа и для адаптива. Для загружаемых картинок на проде нельзя менять размеры картинок для кропа => как итог текущие загруженные картинки поломаются.</p>
+    <p>Пропорция и размеры картинок указываются в начале файла 1 раз для удобства программиста.</p>
+    <p>Пропорция у картинок у одного элемента, который может встречаться в разных местах и размерах по проекту, одна. Допускается вызуальное изменение пропорции за счёт стилей, если того требует дизайн.</p>
+    <pre><code>
+    &lt;!--
+    Пропорция картинок <название элемента> ratio="1,78" (16/9)
+    размеры:
+    1320*742
+    480*270
+    --&gt;
+    </code></pre>
+    <p>Если элемент уже существует (но это не прод, а этап разработки), то пропорцию для кропа и размеры картинок можно изменить самостоятельно.</p>
+    <p>Все картинки в проекте оборачиваются в тег picture.</p>
+    <p>При существенной разнице в десктопе и в мобильной версии добавляем отдельный размер картинок для мобильной версии.</p>
+    <p>Для загружаемых через админку картинок в названии указываем размеры (давай протестируем будет ли это удобно для нас и для программистов), чтобы программистам было проще всё подключить.</p>
+    <pre><code>
+    &lt;picture class="example__picture"&gt;
+        &lt;source srcset="/img/dev/dev-img-480x270.jpg" media="(max-width: 480px)"&gt;
+        &lt;img class="example__img" src="/img/dev/dev-img-1320x742.jpeg" width="1320" height="742" alt="Картинка"&gt;
+    &lt;/picture&gt;
+    </code></pre>
+    <p>Только для логотипов предусматриваем размер картинки в 2 раза больше для ретины</p>
+    <pre><code>
+    &lt;picture class="example__picture"&gt;
+        &lt;img class="example__img" src="/img/dev/dev-square-260x260.jpg"
+        srcset="/img/dev/dev-square-520x520.jpg 2x"
+        width="260" height="260" alt="Картинка"&gt;
+    &lt;/picture&gt;
+    </code></pre>
+    <p>Для картинок, которые используются только для вёрстки и нигде больше в проекте, создаём отдельную папку dev в папке с картинками, в названии самой картинки использем приставку dev-.</p>
+    <p>Используем ограниченное количество картинок dev, по одной картинке под определённую пропорцию и размер.</p>
+</main>
+<footer class="footer"></footer>
+</body>
+</html>
