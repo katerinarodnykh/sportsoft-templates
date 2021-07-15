@@ -1,0 +1,170 @@
+/* Матч. События */
+
+.timeline {
+    margin: 0 0 20px 0;
+}
+
+.timeline__period {
+    text-align: center;
+}
+
+.timeline__unit:last-child .timeline__middle::after {
+    height: 70px;
+}
+
+.timeline__time {
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.timeline__item {
+    height: 100px;
+}
+
+.timeline__item,
+.timeline__part {
+    display: flex;
+    align-items: center;
+}
+
+.timeline__middle {
+    width: 278px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline__middle:after {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 100px;
+    top: 50%;
+    margin-top: -50px;
+    left: 50%;
+    background: var(--black);
+    z-index: -1;
+}
+
+.timeline__score {
+    height: 40px;
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline__part {
+    width: calc((100% - 278px)/2);
+    height: 40px;
+}
+
+.timeline__part--right,
+.timeline__part--right .timeline__player {
+    justify-content: flex-end;
+}
+
+.timeline__picture,
+.timeline__img {
+    display: block;
+}
+
+.timeline__picture {
+    margin: 0 10px;
+    flex-shrink: 0;
+}
+
+.timeline__player {
+    flex-shrink: 0;
+    display: block;
+}
+
+.timeline__name {
+    font-weight: 700;
+}
+
+.timeline__additional {
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.timeline__part--right .timeline__player {
+    text-align: right;
+}
+
+.timeline__part--right .timeline__picture {
+    order: 2;
+}
+
+.timeline__part--right .timeline__icon {
+    order: -1;
+}
+
+.timeline__icon {
+    width: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1200px) {
+    .timeline__icon {
+        width: 70px;
+    }
+}
+
+@media (max-width: 960px) {
+    .structure--events {
+        display: none;
+    }
+
+    .timeline__middle {
+        width: 130px;
+    }
+
+    .timeline__part {
+        width: calc((100% - 130px)/2);
+    }
+}
+
+@media (max-width: 730px) {
+    .timeline__middle {
+        width: 50px;
+    }
+
+    .timeline__score {
+        font-size: 13px;
+    }
+
+    .timeline__part {
+        width: calc((100% - 50px)/2);
+    }
+
+    .timeline__picture {
+        display: none;
+    }
+
+    .timeline__player {
+        text-align: right;
+    }
+
+    .timeline__part--right .timeline__player {
+        text-align: left;
+    }
+
+    .timeline__part,
+    .timeline__part .timeline__player {
+        justify-content: flex-end;
+    }
+
+    .timeline__part--right,
+    .timeline__part--right .timeline__player {
+        justify-content: flex-start;
+    }
+}

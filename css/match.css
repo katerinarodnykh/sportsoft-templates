@@ -1,0 +1,444 @@
+/* Шапка матча */
+
+.match,
+.match a {
+    color: var(--white);
+}
+
+.match {
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 0 1000px rgba(var(--black-opacity), 0.5) inset;
+    display: flex;
+    flex-direction: column;
+}
+
+.match__content {
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.match__date,
+.match__place {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.match__date {
+    margin: 0 0 5px 0;
+}
+
+.match__main {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.match__team {
+    display: flex;
+    align-items: center;
+    width: calc((100% - 250px)/2);
+}
+
+.match__picture {
+    flex-shrink: 0;
+    background-color: var(--white);
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+}
+
+.match__img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.match__team-name {
+    font-weight: 700;
+    margin: 0 20px;
+    flex-grow: 1;
+    font-size: 26px;
+    line-height: 30px;
+}
+
+.match__team--right .match__team-name {
+    order: -1;
+    text-align: right;
+}
+
+.match__middle {
+    width: 250px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.match__score {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 85px;
+}
+
+.match__score-additional {
+    font-size: 22px;
+    line-height: 22px;
+    margin: 10px 0 0 0;
+}
+
+.match__tournament,
+.match__round {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.match__tournament {
+    margin: 0 0 5px 0;
+}
+
+.structure:not(:last-child) {
+    margin: 0 0 40px 0;
+}
+
+.structure__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.structure__unit {
+    width: 50%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.structure__top {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.structure__top--right {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.structure__top-img {
+    display: block;
+    margin: 0 10px 0 0;
+}
+
+.structure__top--right .structure__top-img {
+    margin: 0 0 0 10px;
+    order: 2;
+}
+
+.structure__top-name {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.structure__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+    width: 100%;
+}
+
+.structure__number {
+    flex-shrink: 0;
+}
+
+.structure__player {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.structure__picture {
+    margin: 0 10px;
+    position: relative;
+}
+
+.structure__img {
+    display: block;
+}
+
+.structure__status {
+    position: absolute;
+    right: 0;
+    top: -5px;
+    border-radius: 50%;
+    background-color: orange;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.structure__name-status {
+    display: none;
+}
+
+.structure__name {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.structure__position {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.structure__events {
+    display: flex;
+    align-items: center;
+}
+
+.structure__event {
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.structure__icon {
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.structure__unit--right .structure__count {
+    order: -1;
+}
+
+.structure__empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-grow: 1;
+    min-height: 70px;
+}
+
+.structure--reserve .structure__top {
+    display: none;
+}
+
+.structure__unit--right .structure__player {
+    order: 1;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.structure__unit--right .structure__picture {
+    order: 2;
+}
+
+.structure__unit--right .structure__number {
+    order: 2;
+}
+
+@media (max-width: 1200px) {
+    .match__picture {
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+    }
+
+    .match__middle {
+        height: 100px;
+    }
+
+    .match__team-name {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .match__score {
+        font-size: 60px;
+        line-height: 70px;
+    }
+
+    .match__score-additional {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 960px) {
+    .match__content {
+        padding: 30px;
+    }
+
+    .match__main {
+        padding: 30px 0 20px 0;
+        align-items: flex-start;
+    }
+
+    .match__team {
+        flex-direction: column;
+    }
+
+    .match__team--right .match__team-name {
+        order: 0;
+    }
+
+    .match__team-name,
+    .match__team--right .match__team-name {
+        text-align: center;
+    }
+
+    .match__picture {
+        margin: 0 0 10px 0;
+    }
+
+    .structure__container {
+        flex-direction: column;
+    }
+
+    .structure__unit {
+        width: 100%;
+    }
+
+    .structure--reserve .structure__top {
+        display: flex;
+    }
+
+    .structure__top-name {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 730px) {
+    .match__content {
+        padding: 30px 15px;
+    }
+
+    .match__score {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .match__middle {
+        width: 170px;
+    }
+
+    .match__team {
+        width: calc((100% - 170px)/2);
+    }
+
+    .match__team-name {
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0 10px;
+    }
+
+    .match__date,
+    .match__place {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .match__tournament,
+    .match__round {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .match__content {
+        padding: 30px 15px 20px 15px;
+    }
+
+    .match__picture {
+        width: 70px;
+        height: 70px;
+    }
+
+    .match__team {
+        width: calc((100% - 100px)/2);
+    }
+
+    .match__team-name {
+        font-size: 12px;
+        line-height: 14px;
+        margin: 0;
+    }
+
+    .match__score {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .match__score-additional {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .match__middle {
+        width: 100px;
+    }
+
+    .match__date,
+    .match__place {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .match__date {
+        margin: 0;
+    }
+
+    .match__tournament,
+    .match__round {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .structure__top-name {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .structure__picture {
+        display: none;
+    }
+
+    .structure__name {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .structure__name-status {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 14px;
+        margin: 0 3px;
+    }
+
+    .structure__unit--right .structure__name-status {
+        order: -1;
+    }
+
+    .structure__position {
+        font-size: 10px;
+        line-height: 12px;
+    }
+}

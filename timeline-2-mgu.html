@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Шаблоны SportSoft</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/match.css" rel="stylesheet">
+    <link href="css/timeline-2-mgu.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header"></header>
+    <main class="main">
+        <div class="main-content">
+            <div class="container">
+                <div class="description">
+                    - события как в мгу лиге (Лига универов https://ligauniverov.ru/) - счёт посередине
+                </div>
+                <!--Протокол. События-->
+                <div class="structure structure--events">
+                    <div class="structure__title">События матча</div>
+                    <div class="structure__container">
+                        <a class="structure__top" href="#">
+                            <img class="structure__top-img" src="img/dev-square.jpg" width="42" height="42" alt="Лого команды">
+                            <div class="structure__top-name">Название команды</div>
+                        </a>
+                        <a class="structure__top structure__top--right" href="#">
+                            <img class="structure__top-img" src="img/dev-square.jpg" width="42" height="42" alt="Лого команды">
+                            <div class="structure__top-name">Другое название команды</div>
+                        </a>
+                    </div>
+                </div>
+                <section class="timeline">
+                    <div class="timeline__period">1 тайм</div>
+                    <ul class="timeline__list">
+                        <li class="timeline__unit">
+                            <div class="timeline__time">10'</div>
+                            <div class="timeline__item">
+                                <div class="timeline__part">
+                                    <a class="timeline__picture" href="#">
+                                        <img class="timeline__img" src="img/dev-square.jpg" width="30" height="30" alt="Фото игрока">
+                                    </a>
+                                    <div class="timeline__player">
+                                        <a class="timeline__name" href="#">Имя игрока</a>
+                                        <a class="timeline__additional">Нарушение</a>
+                                    </div>
+                                    <div class="timeline__icon">
+                                        <svg width="24" height="24"><use xlink:href="img/sprite.svg#goal"></use></svg>
+                                    </div>
+                                </div>
+                                <div class="timeline__middle">
+                                    <div class="subtitle timeline__score">1 : 0</div>
+                                </div>
+                                <div class="timeline__part timeline__part--right">
+                                    <a class="timeline__picture" href="#">
+                                        <img class="timeline__img" src="img/dev-square.jpg" width="30" height="30" alt="Фото игрока">
+                                    </a>
+                                    <div class="timeline__player">
+                                        <a class="timeline__name" href="#">Имя игрока</a>
+                                        <a class="timeline__additional" href="#">Имя ассиста</a>
+                                    </div>
+                                    <div class="timeline__icon">
+                                        <svg width="24" height="24"><use xlink:href="img/sprite.svg#goal"></use></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="timeline__period">Пенальти</div>
+                    <ul class="timeline__list">
+                        <li class="timeline__unit">
+                            <div class="timeline__time">37'</div>
+                            <div class="timeline__item">
+                                <div class="timeline__part">
+                                    <a class="timeline__picture" href="#">
+                                        <img class="timeline__img" src="img/dev-square.jpg" width="30" height="30" alt="Фото игрока">
+                                    </a>
+                                    <div class="timeline__player">
+                                        <a class="timeline__name" href="#">Имя игрока</a>
+                                    </div>
+                                    <div class="timeline__icon">
+                                        <svg width="24" height="24"><use xlink:href="/img/sprite.svg#goal"></use></svg>
+                                    </div>
+                                </div>
+                                <div class="timeline__middle">
+                                    <div class="subtitle timeline__score">1 : 0</div>
+                                </div>
+                                <div class="timeline__part timeline__part--right">
+                                    <a class="timeline__picture" href="#">
+                                        <img class="timeline__img" src="img/dev-square.jpg" width="30" height="30" alt="Фото игрока">
+                                    </a>
+                                    <div class="timeline__player">
+                                        <a class="timeline__name" href="#">Имя игрока</a>
+                                    </div>
+                                    <div class="timeline__icon">
+                                        <svg width="24" height="24"><use xlink:href="/img/sprite.svg#goal"></use></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="sidebar"></div>
+    </main>
+    <footer class="footer"></footer>
+</body>
+</html>
