@@ -1,0 +1,312 @@
+/* Шапка матча */
+
+.match,
+.match a {
+    color: var(--white);
+}
+
+.match {
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 0 1000px rgba(var(--black-opacity), 0.5) inset;
+    display: flex;
+    flex-direction: column;
+}
+
+.match__content {
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.match__date,
+.match__place {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.match__date {
+    margin: 0 0 5px 0;
+}
+
+.match__main {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.match__team {
+    display: flex;
+    align-items: center;
+    width: calc((100% - 250px)/2);
+}
+
+.match__picture {
+    flex-shrink: 0;
+    background-color: var(--white);
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+}
+
+.match__img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.match__team-name {
+    font-weight: 700;
+    margin: 0 20px;
+    flex-grow: 1;
+    font-size: 26px;
+    line-height: 30px;
+}
+
+.match__team--right .match__team-name {
+    order: -1;
+    text-align: right;
+}
+
+.match__middle {
+    width: 250px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.match__score {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 85px;
+}
+
+.match__score-additional {
+    font-size: 22px;
+    line-height: 22px;
+    margin: 10px 0 0 0;
+}
+
+.bests {
+    display: flex;
+}
+
+.bests__item {
+    width: calc(100%/2);
+    display: flex;
+    padding: 0 10px 0 0;
+}
+
+.bests__item--right {
+    text-align: right;
+    justify-content: flex-end;
+    padding: 0 0 0 10px;
+    margin: 0 0 0 auto;
+}
+
+.bests__item--right .bests__icon {
+    order: 2;
+}
+
+.bests__icon {
+    margin: 0 5px;
+}
+
+.bests__title {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.match__referees {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.match__tournament,
+.match__round {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.match__tournament {
+    margin: 0 0 5px 0;
+}
+
+@media (max-width: 1200px) {
+    .match__picture {
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+    }
+
+    .match__middle {
+        height: 100px;
+    }
+
+    .match__team-name {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .match__score {
+        font-size: 60px;
+        line-height: 70px;
+    }
+
+    .match__score-additional {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 960px) {
+    .match__content {
+        padding: 30px;
+    }
+
+    .match__main {
+        padding: 30px 0 20px 0;
+        align-items: flex-start;
+    }
+
+    .match__team {
+        flex-direction: column;
+    }
+
+    .match__team--right .match__team-name {
+        order: 0;
+    }
+
+    .match__team-name,
+    .match__team--right .match__team-name {
+        text-align: center;
+    }
+
+    .match__picture {
+        margin: 0 0 10px 0;
+    }
+
+    .bests {
+        margin: 0 0 20px 0;
+    }
+
+    .bests__title {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .bests__text {
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+
+@media (max-width: 730px) {
+    .match__content {
+        padding: 30px 15px;
+    }
+
+    .match__score {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .match__middle {
+        width: 170px;
+    }
+
+    .match__team {
+        width: calc((100% - 170px)/2);
+    }
+
+    .match__team-name {
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0 10px;
+    }
+
+    .match__date,
+    .match__place {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .match__tournament,
+    .match__round {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .bests__item {
+        flex-direction: column;
+    }
+
+    .bests__item--right {
+        align-items: flex-end;
+    }
+
+    .bests__item--right .bests__icon {
+        order: -1;
+    }
+
+    .bests__icon {
+        margin: 0 0 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .match__content {
+        padding: 30px 15px 20px 15px;
+    }
+
+    .match__picture {
+        width: 70px;
+        height: 70px;
+    }
+
+    .match__team {
+        width: calc((100% - 100px)/2);
+    }
+
+    .match__team-name {
+        font-size: 14px;
+        line-height: 16px;
+        margin: 0;
+    }
+
+    .match__score {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .match__score-additional {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .match__middle {
+        width: 100px;
+    }
+
+    .match__date,
+    .match__place {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .match__date {
+        margin: 0;
+    }
+
+    .match__tournament,
+    .match__round {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
