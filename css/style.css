@@ -85,3 +85,30 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+.empty:empty {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.empty:empty:after {
+  content: attr(data-empty);
+}
+
+.description {
+  margin: 50px 0;
+  font-size: 20px;
+  line-height: 24px;
+  border: 3px solid darkred;
+  padding: 20px;
+}
+
+.description p {
+  margin: 0 0 15px 0;
+}

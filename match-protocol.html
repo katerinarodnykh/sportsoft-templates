@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Шаблоны SportSoft</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/match-common.css" rel="stylesheet">
+    <link href="css/match-protocol.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header"></header>
+    <main class="main">
+        <div class="main-content">
+            <div class="container" style="max-width: 950px; margin: 0 auto;">
+                <div class="description">
+                    <p>- все иконки, которые будут использоваться в протоколе и таймлайне выводим перед протоколом: иконка - и какому событию соответствует, чтобы программист видел их все. 
+                        Естественно проверяем, чтобы иконки были под все события</p>
+                    <p>- структура протокола именно такая, под каждую команду свой список</p>
+                    <p>- предусматриваем вариант, что список состава может быть пуст</p>
+                    <p>- предусматриваем длинное имя игрока и большое количество иконок</p>
+                    <p>- предусматриваем отметки капитана и вратаря</p>
+                    <p>- если протокол с подчёркиванием строчек, то обычно более красивый вариант - равное количество полосок в двух списках.
+                        Соответственно для неравного количества предусматриваем пустые строчки, чтобы уровнять, пишем комментарий программисту:
+                        в списках составов одинаковое кол-во элементов у обеих команд, для симметрии вставляются пустые элементы li.</p>
+                </div>
+                <div class="protocol">
+                    <div class="match-title">Протокол матча</div>
+                    <div class="match-teams">
+                        <a class="match-team" href="#">
+                            <img class="match-team__img" src="img/dev-square.jpg" width="42" height="42" alt="Лого команды">
+                            <div class="match-team__name">Название команды</div>
+                        </a>
+                        <a class="match-team match-team--right" href="#">
+                            <img class="match-team__img" src="img/dev-square.jpg" width="42" height="42" alt="Лого команды">
+                            <div class="match-team__name">Другое название команды</div>
+                        </a>
+                    </div>
+                    <div class="protocol__block">
+                        <div class="protocol__container">
+                            <div class="protocol__unit">
+                                <a class="match-team match-team--mobile" href="#">
+                                    <img class="match-team__img" src="img/dev-square.jpg" width="42" height="42" alt="Лого команды">
+                                    <div class="match-team__name">Название команды</div>
+                                </a>
+                                <ul class="protocol__list empty" data-empty="Список состава пуст">
+                                    <li class="protocol__item">
+                                        <div class="protocol__number">15</div>
+                                        <a class="protocol__player" href="#">
+                                            <div class="protocol__picture">
+                                                <img class="protocol__img" src="img/dev-square.jpg" width="30" height="30" alt="Фото игрока">
+                                                <div class="protocol__status">К</div>
+                                            </div>
+                                            <div class="protocol__text">
+                                                <div class="protocol__name">Имя Фамилия <span class="protocol__name-status">(к)</span></div>
+                                                <div class="protocol__position">Нападающий</div>
+                                            </div>
+                                        </a>
+                                        <ul class="protocol__events">
+                                            <!--Забитый гол-->
+                                            <li class="protocol__event">
+                                                <div class="protocol__icon">
+                                                    <svg width="24" height="24"><use xlink:href="img/sprite.svg#goal"></use></svg>
+                                                </div>
+                                                <div class="protocol__count">x2</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="protocol__unit protocol__unit--right">
+                                <a class="match-team match-team--right match-team--mobile" href="#">
+                                    <img class="match-team__img" src="img/dev-square.jpg" width="42" height="42" alt="Лого команды">
+                                    <div class="match-team__name">Другое название команды</div>
+                                </a>
+                                <ul class="protocol__list empty" data-empty="Список состава пуст">
+                                    <li class="protocol__item">
+                                        <div class="protocol__number">15</div>
+                                        <a class="protocol__player" href="#">
+                                            <div class="protocol__picture">
+                                                <img class="protocol__img" src="img/dev-square.jpg" width="30" height="30" alt="Фото игрока">
+                                                <div class="protocol__status">К</div>
+                                            </div>
+                                            <div class="protocol__text">
+                                                <div class="protocol__name">Имя Фамилия <span class="protocol__name-status">(к)</span></div>
+                                                <div class="protocol__position">Нападающий</div>
+                                            </div>
+                                        </a>
+                                        <ul class="protocol__events">
+                                            <li class="protocol__event">
+                                                <div class="protocol__icon">
+                                                    <svg width="24" height="24"><use xlink:href="img/sprite.svg#goal"></use></svg>
+                                                </div>
+                                                <div class="protocol__count">2x</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Протокол. Запасной состав-->
+                    <div class="protocol__block protocol__block--reserve">
+                        <div class="match-title">Запасной состав</div>
+                        <div class="protocol__container">
+                            <div class="protocol__unit">
+                                <a class="match-team match-team--mobile" href="#">
+                                    <img class="match-team__img" src="img/dev-square.jpg" width="42" height="42" alt="Лого команды">
+                                    <div class="match-team__name">Название команды</div>
+                                </a>
+                                <ul class="protocol__list empty" data-empty="Список состава пуст">
+                                    <li class="protocol__item">
+                                        <div class="protocol__number">15</div>
+                                        <a class="protocol__player" href="#">
+                                            <div class="protocol__picture">
+                                                <img class="protocol__img" src="img/dev-square.jpg" width="30" height="30" alt="Фото игрока">
+                                                <div class="protocol__status">К</div>
+                                            </div>
+                                            <div class="protocol__text">
+                                                <div class="protocol__name">Имя Фамилия <span class="protocol__name-status">(к)</span></div>
+                                                <div class="protocol__position">Нападающий</div>
+                                            </div>
+                                        </a>
+                                        <ul class="protocol__events">
+                                            <!--Забитый гол-->
+                                            <li class="protocol__event">
+                                                <div class="protocol__icon">
+                                                    <svg width="24" height="24"><use xlink:href="img/sprite.svg#goal"></use></svg>
+                                                </div>
+                                                <div class="protocol__count">x2</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="protocol__unit protocol__unit--right">
+                                <a class="match-team match-team--right match-team--mobile" href="#">
+                                    <img class="match-team__img" src="img/dev-square.jpg" width="42" height="42" alt="Лого команды">
+                                    <div class="match-team__name">Другое название команды</div>
+                                </a>
+                                <ul class="protocol__list empty" data-empty="Список состава пуст"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Протокол. Пример с пустыми элементами для симметрии-->
+                    <div class="protocol__block">
+                        <div class="match-title">Пример с пустыми элементами для симметрии</div>
+                        <div class="protocol__container">
+                            <div class="protocol__unit">
+                                <a class="match-team match-team--mobile" href="#">
+                                    <img class="match-team__img" src="img/dev-square.jpg" width="42" height="42" alt="Лого команды">
+                                    <div class="match-team__name">Название команды</div>
+                                </a>
+                                <ul class="protocol__list empty" data-empty="Список состава пуст">
+                                    <li class="protocol__item">
+                                        <div class="protocol__number">15</div>
+                                        <a class="protocol__player" href="#">
+                                            <div class="protocol__picture">
+                                                <img class="protocol__img" src="img/dev-square.jpg" width="30" height="30" alt="Фото игрока">
+                                                <div class="protocol__status">К</div>
+                                            </div>
+                                            <div class="protocol__text">
+                                                <div class="protocol__name">Имя Фамилия <span class="protocol__name-status">(к)</span></div>
+                                                <div class="protocol__position">Нападающий</div>
+                                            </div>
+                                        </a>
+                                        <ul class="protocol__events">
+                                            <!--Забитый гол-->
+                                            <li class="protocol__event">
+                                                <div class="protocol__icon">
+                                                    <svg width="24" height="24"><use xlink:href="img/sprite.svg#goal"></use></svg>
+                                                </div>
+                                                <div class="protocol__count">x2</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="protocol__item">
+                                        <div class="protocol__number">15</div>
+                                        <a class="protocol__player" href="#">
+                                            <div class="protocol__picture">
+                                                <img class="protocol__img" src="img/dev-square.jpg" width="30" height="30" alt="Фото игрока">
+                                                <div class="protocol__status">К</div>
+                                            </div>
+                                            <div class="protocol__text">
+                                                <div class="protocol__name">Имя Фамилия <span class="protocol__name-status">(к)</span></div>
+                                                <div class="protocol__position">Нападающий</div>
+                                            </div>
+                                        </a>
+                                        <ul class="protocol__events">
+                                            <!--Забитый гол-->
+                                            <li class="protocol__event">
+                                                <div class="protocol__icon">
+                                                    <svg width="24" height="24"><use xlink:href="img/sprite.svg#goal"></use></svg>
+                                                </div>
+                                                <div class="protocol__count">x2</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="protocol__item">
+                                        <div class="protocol__number">15</div>
+                                        <a class="protocol__player" href="#">
+                                            <div class="protocol__picture">
+                                                <img class="protocol__img" src="img/dev-square.jpg" width="30" height="30" alt="Фото игрока">
+                                                <div class="protocol__status">К</div>
+                                            </div>
+                                            <div class="protocol__text">
+                                                <div class="protocol__name">Имя Фамилия <span class="protocol__name-status">(к)</span></div>
+                                                <div class="protocol__position">Нападающий</div>
+                                            </div>
+                                        </a>
+                                        <ul class="protocol__events">
+                                            <!--Забитый гол-->
+                                            <li class="protocol__event">
+                                                <div class="protocol__icon">
+                                                    <svg width="24" height="24"><use xlink:href="img/sprite.svg#goal"></use></svg>
+                                                </div>
+                                                <div class="protocol__count">x2</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="protocol__unit protocol__unit--right">
+                                <a class="match-team match-team--right match-team--mobile" href="#">
+                                    <img class="match-team__img" src="img/dev-square.jpg" width="42" height="42" alt="Лого команды">
+                                    <div class="match-team__name">Другое название команды</div>
+                                </a>
+                                <ul class="protocol__list empty" data-empty="Список состава пуст">
+                                    <li class="protocol__item">
+                                        <div class="protocol__number">15</div>
+                                        <a class="protocol__player" href="#">
+                                            <div class="protocol__picture">
+                                                <img class="protocol__img" src="img/dev-square.jpg" width="30" height="30" alt="Фото игрока">
+                                                <div class="protocol__status">К</div>
+                                            </div>
+                                            <div class="protocol__text">
+                                                <div class="protocol__name">Имя Фамилия <span class="protocol__name-status">(к)</span></div>
+                                                <div class="protocol__position">Нападающий</div>
+                                            </div>
+                                        </a>
+                                        <ul class="protocol__events">
+                                            <li class="protocol__event">
+                                                <div class="protocol__icon">
+                                                    <svg width="24" height="24"><use xlink:href="img/sprite.svg#goal"></use></svg>
+                                                </div>
+                                                <div class="protocol__count">2x</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="protocol__item"></li>
+                                    <li class="protocol__item"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar"></div>
+    </main>
+    <footer class="footer"></footer>
+</body>
+</html>
